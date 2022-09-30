@@ -50,6 +50,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Price: Enter the price
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[ImplementPropertyType("price")]
+		public virtual int Price => global::Umbraco.Cms.Web.Common.PublishedModels.ProductProperties.GetPrice(this, _publishedValueFallback);
+
+		///<summary>
 		/// ProductId
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
@@ -72,5 +79,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("productName")]
 		public virtual string ProductName => global::Umbraco.Cms.Web.Common.PublishedModels.ProductProperties.GetProductName(this, _publishedValueFallback);
+
+		///<summary>
+		/// productRating
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[ImplementPropertyType("productRating")]
+		public virtual int ProductRating => global::Umbraco.Cms.Web.Common.PublishedModels.ProductProperties.GetProductRating(this, _publishedValueFallback);
 	}
 }

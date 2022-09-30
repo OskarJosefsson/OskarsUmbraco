@@ -1,9 +1,9 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
 
 <section class="py-5">
-	@await Html.PartialAsync("./Partials/ProductList.cshtml")
+    @await Html.PartialAsync("./Partials/ProductList.cshtml")
 </section>

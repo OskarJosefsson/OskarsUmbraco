@@ -22,6 +22,10 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 	/// <summary>Product Properties</summary>
 	public partial interface IProductProperties : IPublishedElement
 	{
+		/// <summary>Price</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		int Price { get; }
+
 		/// <summary>ProductId</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -36,6 +40,10 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string ProductName { get; }
+
+		/// <summary>productRating</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		int ProductRating { get; }
 	}
 
 	/// <summary>Product Properties</summary>
@@ -68,6 +76,17 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Price: Enter the price
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[ImplementPropertyType("price")]
+		public virtual int Price => GetPrice(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Price</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		public static int GetPrice(IProductProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "price");
 
 		///<summary>
 		/// ProductId
@@ -107,5 +126,16 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static string GetProductName(IProductProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "productName");
+
+		///<summary>
+		/// productRating
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[ImplementPropertyType("productRating")]
+		public virtual int ProductRating => GetProductRating(this, _publishedValueFallback);
+
+		/// <summary>Static getter for productRating</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		public static int GetProductRating(IProductProperties that, IPublishedValueFallback publishedValueFallback) => that.Value<int>(publishedValueFallback, "productRating");
 	}
 }
