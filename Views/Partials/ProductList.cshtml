@@ -6,9 +6,7 @@
 
 <div class="container px-4 px-lg-5 mt-5">
     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-        
-         
-             @if (Model.ListOfProducts != null)
+            @if (Model.ListOfProducts != null)
              {
                  foreach (var product in Model.ListOfProducts)
                  {
@@ -16,6 +14,7 @@
                      var productName = product.Content.Value("productName");
                      var productPrice = product.Content.Value("price");
                      var productImage = product.Content.Value<IPublishedContent>("productImage");
+                     
                      <div class="col mb-5">
                          <div class="card h-100">
                              <!-- Product image-->
@@ -28,7 +27,6 @@
                                      <h5 class="fw-bolder"></h5>
                                      <!-- Product price-->
                                      @productPrice Kr
-                                   
                                  </div>
                              </div>
                              <!-- Product actions-->
@@ -39,10 +37,5 @@
                      </div>
                  }
              }
-
-
-         
-         
-     
     </div>
     </div>
